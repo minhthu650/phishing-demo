@@ -1,56 +1,109 @@
-/* Đặt lại một số kiểu mặc định */
+/* Reset cơ bản */
 * {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
+    background-color: #f4f6f8;
+    padding: 30px;
 }
 
+/* Container */
 .container {
-    max-width: 400px;
-    margin: auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-h2, h3 {
+/* Tiêu đề */
+h2 {
     text-align: center;
+    color: #2a7ae2;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.navbar button {
+    background-color: #e1e7f0;
+    color: #333;
+    border: none;
+    padding: 12px 20px;
+    margin: 0 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #2a7ae2;
+    color: white;
+}
+
+/* Tab content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Form inputs */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+    margin: 10px 0 5px;
+    font-weight: 500;
+    color: #444;
 }
 
 input, select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #2a7ae2;
+    outline: none;
+}
+
+/* Nút form */
+button[type="submit"] {
+    background-color: #2a7ae2;
     color: white;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-.hidden {
-    display: none;
+button[type="submit"]:hover {
+    background-color: #1e5fbf;
 }
