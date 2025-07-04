@@ -4,13 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Web Chuyển Tiền</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden { display: none; }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .navbar button {
+            margin-right: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h2>Ngân hàng Vietcombank</h2>
 
-        <form id="register-form">
+        <div class="navbar">
+            <button onclick="showTab('register')">Đăng Ký</button>
+            <button onclick="showTab('login')">Đăng Nhập</button>
+            <button onclick="showTab('dashboard')">Dashboard</button>
+        </div>
+
+        <!-- Đăng Ký -->
+        <form id="register" class="tab-content">
             <label for="reg-username">Tên đăng nhập:</label>
             <input type="text" id="reg-username" name="username" required>
 
@@ -20,8 +43,8 @@
             <button type="submit">Đăng Ký</button>
         </form>
 
-        <div id="login-form-container" class="hidden">
-            <h2>Đăng Nhập</h2>
+        <!-- Đăng Nhập -->
+        <div id="login" class="tab-content">
             <form id="login-form">
                 <label for="login-username">Tên đăng nhập:</label>
                 <input type="text" id="login-username" name="username" required>
@@ -33,7 +56,8 @@
             </form>
         </div>
 
-        <div id="dashboard" class="hidden">
+        <!-- Dashboard -->
+        <div id="dashboard" class="tab-content">
             <h2>Chào mừng, <span id="user-name"></span></h2>
             <h3>Số dư tài khoản: <span id="balance">1000</span> VND</h3>
 
