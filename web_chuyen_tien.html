@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Chuyển Tiền</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Ngân hàng Vietcombank</h2>
+
+        <form id="register-form">
+            <label for="reg-username">Tên đăng nhập:</label>
+            <input type="text" id="reg-username" name="username" required>
+
+            <label for="reg-password">Mật khẩu:</label>
+            <input type="password" id="reg-password" name="password" required>
+
+            <button type="submit">Đăng Ký</button>
+        </form>
+
+        <div id="login-form-container" class="hidden">
+            <h2>Đăng Nhập</h2>
+            <form id="login-form">
+                <label for="login-username">Tên đăng nhập:</label>
+                <input type="text" id="login-username" name="username" required>
+
+                <label for="login-password">Mật khẩu:</label>
+                <input type="password" id="login-password" name="password" required>
+
+                <button type="submit">Đăng Nhập</button>
+            </form>
+        </div>
+
+        <div id="dashboard" class="hidden">
+            <h2>Chào mừng, <span id="user-name"></span></h2>
+            <h3>Số dư tài khoản: <span id="balance">1000</span> VND</h3>
+
+            <h3>Chuyển Tiền</h3>
+            <form id="transfer-form">
+                <label for="account-number">Số Tài Khoản:</label>
+                <input type="text" id="account-number" name="account-number" required>
+
+                <label for="bank">Ngân Hàng:</label>
+                <select id="bank" name="bank">
+                    <option value="Vietcombank">Vietcombank</option>
+                    <option value="Vietinbank">Vietinbank</option>
+                    <option value="ACB">ACB</option>
+                    <option value="BIDV">BIDV</option>
+                    <option value="Techcombank">Techcombank</option>
+                </select>
+
+                <label for="amount">Số tiền:</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <button type="submit">Chuyển Tiền</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
